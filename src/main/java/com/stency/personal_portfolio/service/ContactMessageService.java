@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ContactService {
+public class ContactMessageService {
 
     private  final ContactMessageRepository contactMessageRepository;
 
     @Autowired
-    public ContactService(ContactMessageRepository contactMessageRepository) {
+    public ContactMessageService(ContactMessageRepository contactMessageRepository) {
         this.contactMessageRepository = contactMessageRepository;
     }
     public List <ContactMessageEntity>getAllContacts(){
