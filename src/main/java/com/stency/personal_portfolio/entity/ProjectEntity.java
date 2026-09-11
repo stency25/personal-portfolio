@@ -19,7 +19,12 @@ public class ProjectEntity {
 
     private String imageUrl;
 
-//constructor
+    //EMPTY CONSTRUCTOR
+    public ProjectEntity(){
+
+    }
+
+//parameterized constructor
     public ProjectEntity(String title, String description, String techStack, String githubUrl, String liveUrl, String imageUrl) {
         this.title = title;
         this.description = description;

@@ -14,8 +14,11 @@ public class SkillEntity {
     @Enumerated(EnumType.STRING)
     private SkillCategory category;
 
-    //constructor
+    //emptyb constructor
+    public SkillEntity(){
 
+    }
+    //constructor with parameter
     public SkillEntity(Long id, String name, SkillCategory category) {
         this.id = id;
         this.name = name;
