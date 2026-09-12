@@ -8,11 +8,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CorsConfig implements WebMvcConfigurer  {
 
+
     @Override
-    public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/api/***")
-                .allowedOrigins("http://localhost:5500", "http://127.0.0.1:5500")
-                .allowedMethods("GET", "POST","PUT", "DELETE")
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**")
+                .allowedOrigins(
+                        "http://localhost:5500",
+                        "http://127.0.0.1:5500",
+                        "https://gentle-cannoli-e6b5c9.netlify.app"
+                )
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
+
+
 }
